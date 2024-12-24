@@ -17,7 +17,10 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json()); 
 app.use(cookieParser());
 
-app.use(cors()); 
+app.use(cors({
+    origin:"https://chat-app-frontend-one-sigma.vercel.app",
+    credentials:true
+})); 
 
 
 // routes
